@@ -4,9 +4,7 @@
 
 This project demonstrates an **Arduino UNO based ultrasonic object detection system** using an **HC-SR04 ultrasonic distance sensor**.
 
-The system detects objects by measuring the distance between the ultrasonic sensor and the object. An LED and buzzer are used to provide visual and audible indications when an object is detected within a specified distance.
-
-The project includes the complete wiring diagram, physical hardware setup, object detection demonstration, and working video.
+The system detects objects by measuring the distance between the ultrasonic sensor and an object. An LED and buzzer are used to provide visual and audible indications when an object is detected within a specified distance.
 
 ---
 
@@ -27,13 +25,12 @@ The system can:
 ## 🛠️ Components Used
 
 * Arduino UNO
-* HC-SR04 Ultrasonic Sensor
+* HC-SR04 Ultrasonic Distance Sensor
 * LED
 * 220 Ω resistor
 * Buzzer
 * Jumper wires
 * USB cable
-* Computer/Laptop
 
 ---
 
@@ -72,55 +69,7 @@ The division by 2 is required because the ultrasonic signal travels from the sen
 
 ---
 
-# 🔧 Wiring Diagram
-
-The following diagram shows the electrical connections between the Arduino UNO, HC-SR04 ultrasonic sensor, LED, and other components.
-
-![Wiring Diagram](images/wiring-diagram.png)
-
----
-
-# 🖥️ Hardware Setup
-
-The complete physical hardware setup consists of an Arduino UNO connected to the HC-SR04 ultrasonic sensor and indicator components.
-
-![Hardware Setup](images/hardware-setup.jpg)
-
----
-
-# 🟢 No Object Detected
-
-The following image shows the system when there is no object within the configured detection range of the ultrasonic sensor.
-
-![No Object Detected](images/no-object-detected.jpg)
-
----
-
-# 🔴 Object Detected
-
-The following image shows the system when an object is detected by the HC-SR04 ultrasonic sensor.
-
-The LED/buzzer provides an indication according to the programmed detection condition.
-
-![Object Detected](images/object-detected.jpg)
-
----
-
-# 🎥 Working Demonstration
-
-The working video demonstrates the complete operation of the ultrasonic object detection system.
-
-The video shows the sensor detecting an object and the corresponding indication from the system.
-
-### Working Video
-
-[▶️ Watch the Working Video](video/working-video.mp4)
-
----
-
-# 🔄 System Operation
-
-The system operates in the following sequence:
+## 🔄 System Operation
 
 1. Arduino sends a trigger signal to the HC-SR04 sensor.
 2. HC-SR04 transmits an ultrasonic pulse.
@@ -134,22 +83,18 @@ The system operates in the following sequence:
 
 ---
 
-# 📊 Detection Logic
+## 📊 Detection Logic
 
-The system can be programmed using a distance threshold.
+| Object Condition   | LED | Buzzer |
+| ------------------ | --- | ------ |
+| No object detected | OFF | OFF    |
+| Object detected    | ON  | ON     |
 
-For example:
-
-| Object Condition                           | LED | Buzzer |
-| ------------------------------------------ | --- | ------ |
-| No object / object outside detection range | OFF | OFF    |
-| Object detected within detection range     | ON  | ON     |
-
-The detection distance can be modified in the Arduino program according to the application.
+The detection distance can be modified in the Arduino program according to the required application.
 
 ---
 
-# 💻 Software
+## 💻 Software
 
 The project can be programmed using:
 
@@ -158,29 +103,9 @@ The project can be programmed using:
 
 ---
 
-# 📷 Project Demonstration
+## 🚀 Applications
 
-### Wiring Diagram
-
-![Wiring Diagram](images/wiring-diagram.png)
-
-### Hardware Setup
-
-![Hardware Setup](images/hardware-setup.jpg)
-
-### No Object Detected
-
-![No Object Detected](images/no-object-detected.jpg)
-
-### Object Detected
-
-![Object Detected](images/object-detected.jpg)
-
----
-
-# 🚀 Applications
-
-This project can be used as a basic system for:
+This project can be used for:
 
 * Obstacle detection
 * Object detection
@@ -193,7 +118,7 @@ This project can be used as a basic system for:
 
 ---
 
-# 🔮 Future Improvements
+## 🔮 Future Improvements
 
 The project can be further improved by adding:
 
@@ -204,35 +129,25 @@ The project can be further improved by adding:
 * IoT monitoring
 * Wireless communication
 * Mobile application monitoring
-* Integration with industrial automation systems
+* Industrial automation integration
 
 ---
 
-# 📁 Project Structure
+## 📁 Project Files
 
-```text
-Arduino-Ultrasonic-Object-Detection/
-│
-├── README.md
-│
-├── images/
-│   ├── wiring-diagram.png
-│   ├── hardware-setup.jpg
-│   ├── no-object-detected.jpg
-│   └── object-detected.jpg
-│
-└── video/
-    └── working-video.mp4
-```
+The project images and demonstration video are available in the following folders:
+
+* **`images/`** – Wiring diagram and hardware photographs
+* **`video/`** – Working demonstration video
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Sakthipriyan B**
 
 ---
 
-# 📄 License
+## 📄 License
 
 This project is created for educational and academic purposes.
